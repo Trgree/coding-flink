@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="flink-coding-cep" />
+        <module name="flink-coding-common" />
+        <module name="flink-coding-sql" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="flink-coding" target="1.5" />
+      <module name="flink-coding-cep" target="1.5" />
+      <module name="flink-coding-common" target="1.5" />
+      <module name="flink-coding-sql" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

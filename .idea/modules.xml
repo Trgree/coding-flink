@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flink-coding.iml" filepath="$PROJECT_DIR$/flink-coding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-coding-cep/flink-coding-cep.iml" filepath="$PROJECT_DIR$/flink-coding-cep/flink-coding-cep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-coding-common/flink-coding-common.iml" filepath="$PROJECT_DIR$/flink-coding-common/flink-coding-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-coding-sql/flink-coding-sql.iml" filepath="$PROJECT_DIR$/flink-coding-sql/flink-coding-sql.iml" />
+    </modules>
+  </component>
+</project>
