@@ -4,27 +4,30 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 import org.apache.flink.table.api.bridge.scala.StreamTableEnvironment
 
 /**
- * kafka读取
+ * JDBC读取（待测试）
+ *
  * @author jace
  * @Date 2020/7/31 10:43 下午
  */
-object KafkaToPrint {
+object JDBCToPrint {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
     val tableEnv = StreamTableEnvironment.create(env)
     //    源表
     tableEnv.executeSql("""CREATE TABLE source_table (
-                          |  word STRING,
-                          |  cnt INT
+                          |  id BIGINT,
+                          |  name STRING,
+                          |  age INT,
+                          |  status BOOLEAN,
+                          |  PRIMARY KEY (id) NOT ENFORCED
                           |) WITH (
-                          | 'connector' = 'kafka',
-                          | 'topic' = 'flink_kafka_test',
-                          | 'properties.bootstrap.servers' = 'localhost:9092',
-                          | 'properties.group.id' = 'testGroup',
-                          | 'format' = 'csv', -- 'csv', 'json', 'avro', 'debezium-json' and 'canal-json'
-                          | 'scan.startup.mode' = 'earliest-offset' -- 'earliest-offset', 'latest-offset', 'group-offsets', 'timestamp' and 'specific-offsets'
-                          |) """.stripMargin)
+                          |   'connector' = 'jdbc',
+                          |   'url' = 'jdbc:mysql://localhost:3306/mydatabase',
+                          |   'table-name' = 'users'
+                          |   'username' = '',
+                          |   'password' = ''
+                          |)""".stripMargin)
 
     // 使用like定义print表
     tableEnv.executeSql("CREATE TABLE print_table  WITH ('connector' = 'print') LIKE source_table (EXCLUDING ALL)")
