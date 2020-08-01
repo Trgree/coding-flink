@@ -4,7 +4,7 @@ import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 import org.apache.flink.table.api.bridge.scala.StreamTableEnvironment
 
 /**
- * kafka读取
+ * kafka读取(待测试)
  * @author jace
  * @Date 2020/7/31 10:43 下午
  */
