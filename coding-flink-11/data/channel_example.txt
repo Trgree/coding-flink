@@ -1,0 +1,19 @@
+
+
+--tables create table
+--functions
+--inserts
+
+{
+    "tables":["CREATE TABLE source_table (
+                UUID STRING,
+                AppKey STRING
+              ) WITH (
+                 "connector" = 'jdbc',
+                 'url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data',
+                 'table-name' = 'AppInfo', --可不用
+                 'username' = 'root',
+                 'password' = 'mysql@123',
+                 'query' = 'select a.UUID,a.AppKey from AppInfo a join CorpAppInfo b ON a.AppKey=b.AppKey'
+              )"]
+}

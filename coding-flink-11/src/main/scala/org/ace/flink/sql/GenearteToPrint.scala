@@ -36,6 +36,7 @@ object GenearteToPrint {
                           | 'fields.f_random_str.length'='10'
                           |) """.stripMargin)
 
+
     // 使用like定义print表
     tableEnv.executeSql("CREATE TABLE print_table  WITH ('connector' = 'print') LIKE source_table (EXCLUDING ALL)")
     // 输出到目的表

@@ -22,7 +22,7 @@ object PrintExample {
                           |  'path'='data/wordcount_out',
                           |  'format'='csv'
                           |) """.stripMargin)
-    // 查询并打印
+    // 查询并打印(不打印)
     tableEnv.executeSql("select * from  source_table").print()
 
     // 定义print表
