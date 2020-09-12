@@ -28,7 +28,7 @@ object KafkaToPrint {
                           |) WITH (
                           | 'connector' = 'kafka-0.11',
                           | 'topic' = 'visitLog_tdw',
-                          | 'properties.bootstrap.servers' = '10.99.218.3:9092',
+                          | 'properties.bootstrap.servers' = 'localhost:9092',
                           | 'properties.group.id' = 'testGroup',
                           | 'format' = 'json', -- 'csv', 'json', 'avro', 'debezium-json' and 'canal-json'
                           | 'scan.startup.mode' = 'earliest-offset' -- 'earliest-offset', 'latest-offset', 'group-offsets', 'timestamp' and 'specific-offsets'

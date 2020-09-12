@@ -12,6 +12,7 @@ object PrintExample {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)
+    env.enableCheckpointing(10000)
     val tableEnv = StreamTableEnvironment.create(env)
     //    源表
     tableEnv.executeSql("""CREATE TABLE source_table (
@@ -22,7 +23,7 @@ object PrintExample {
                           |  'path'='data/wordcount_out',
                           |  'format'='csv'
                           |) """.stripMargin)
-    // 查询并打印(不打印)
+    // 查询并打印(不打印，需要开启checkpoint)
     tableEnv.executeSql("select * from  source_table").print()
 
     // 定义print表

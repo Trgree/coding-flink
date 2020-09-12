@@ -28,7 +28,7 @@ object KafkaJoinJDBC {
                           |) WITH (
                           | 'connector' = 'kafka-0.11',
                           | 'topic' = 'visitLog_tdw',
-                          | 'properties.bootstrap.servers' = '10.99.218.3:9092',
+                          | 'properties.bootstrap.servers' = 'localhost:9092',
                           | 'properties.group.id' = 'testGroup',
                           | 'format' = 'json', -- 'csv', 'json', 'avro', 'debezium-json' and 'canal-json'
                           | 'scan.startup.mode' = 'earliest-offset' -- 'earliest-offset', 'latest-offset', 'group-offsets', 'timestamp' and 'specific-offsets'
@@ -39,7 +39,7 @@ object KafkaJoinJDBC {
                           |  other int
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://localhost:3306/ehr_data',
                           |   'table-name' = 'ChannelJoinTest',
                           |   'username' = 'root',
                           |   'password' = 'mysql@123',
