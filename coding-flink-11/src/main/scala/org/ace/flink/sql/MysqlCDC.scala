@@ -35,7 +35,7 @@ object MysqlCDC {
                           |  PRIMARY KEY (UUID) NOT ENFORCED
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/ehr_data',
                           |   'table-name' = 'ChannelTest',
                           |   'username' = 'root',
                           |   'password' = 'mysql@123'

@@ -20,7 +20,7 @@ object JDBCToPrint {
                           |  AppKey STRING
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://localhost:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/ehr_data',
                           |   'table-name' = 'AppInfo', --视图也可以
                           |   'username' = 'root',
                           |   'password' = 'mysql@123'

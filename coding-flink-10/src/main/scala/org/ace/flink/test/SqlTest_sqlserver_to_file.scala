@@ -17,7 +17,7 @@ object SqlTest_sqlserver_to_file {
                          |  OrganizationName STRING
                          |) WITH (
                          |  'connector.type' = 'jdbc', -- required: specify this table type is jdbc
-                         |  'connector.url' = 'jdbc:sqlserver://9.134.115.133;database=DM_A', -- required: JDBC DB url
+                         |  'connector.url' = 'jdbc:sqlserver://dev-mysql;database=DM_A', -- required: JDBC DB url
                          |  'connector.table' = 'DM.DM_DIM_Organization',  -- required: jdbc table name
                          |  'connector.driver' = 'com.microsoft.sqlserver.jdbc.SQLServerDriver', -- optional: the class name of the JDBC driver to use to connect to this URL.
                          |                                                -- If not set, it will automatically be derived from the URL.

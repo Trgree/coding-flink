@@ -23,7 +23,7 @@ object JDBCToPrint_query {
                           |  PRIMARY KEY (id) NOT ENFORCED
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://localhost:3306/mydatabase',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/mydatabase',
                           |   'table-name' = 'users',
                           |   'username' = '',
                           |   'password' = '',

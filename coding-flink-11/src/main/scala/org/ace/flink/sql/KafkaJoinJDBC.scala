@@ -39,7 +39,7 @@ object KafkaJoinJDBC {
                           |  other int
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://localhost:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/ehr_data',
                           |   'table-name' = 'ChannelJoinTest',
                           |   'username' = 'root',
                           |   'password' = 'mysql@123',

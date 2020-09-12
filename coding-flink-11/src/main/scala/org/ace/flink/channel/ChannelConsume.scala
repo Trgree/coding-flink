@@ -32,7 +32,7 @@ object ChannelConsume {
                           |  other INT
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/ehr_data',
                           |   'table-name' = 'ChannelTest', --可不用
                           |   'username' = 'root',
                           |   'password' = 'mysql@123'

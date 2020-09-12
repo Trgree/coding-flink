@@ -16,7 +16,7 @@ object SqlTest_mysql_to_file {
                          |  FuncName STRING
                          |) WITH (
                          |  'connector.type' = 'jdbc', -- required: specify this table type is jdbc
-                         |  'connector.url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data', -- required: JDBC DB url
+                         |  'connector.url' = 'jdbc:mysql://dev-mysql:3306/ehr_data', -- required: JDBC DB url
                          |  'connector.table' = 'AppFuncInfo',  -- required: jdbc table name
                          |  'connector.driver' = 'com.mysql.jdbc.Driver', -- optional: the class name of the JDBC driver to use to connect to this URL.
                          |                                                -- If not set, it will automatically be derived from the URL.

@@ -21,7 +21,7 @@ object JDBCQueryToPrint {
                           |  AppKey STRING
                           |) WITH (
                           |   'connector' = 'jdbc',
-                          |   'url' = 'jdbc:mysql://9.134.43.59:3306/ehr_data',
+                          |   'url' = 'jdbc:mysql://dev-mysql:3306/ehr_data',
                           |   'table-name' = 'AppInfo',
                           |   'username' = 'root',
                           |   'password' = 'mysql@123',
